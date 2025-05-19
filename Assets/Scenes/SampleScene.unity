@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 56417956}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -298,7 +298,7 @@ Transform:
   m_GameObject: {fileID: 791160665}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.45, y: 0.18, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -388,7 +388,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.25
-  m_Height: 1.7
+  m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.85, z: 0}
 --- !u!114 &902822351
@@ -433,7 +433,19 @@ MonoBehaviour:
     m_ActionId: 34a85f2c-c1a4-4861-abd5-35b0913c7f02
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 902822353}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnLook
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: e237ddf6-8401-4036-b644-4e1f3936f082
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
@@ -441,7 +453,19 @@ MonoBehaviour:
     m_ActionId: ae18e819-eaba-415a-8019-db63dc4e299a
     m_ActionName: Player/PauseMenu[/Keyboard/tab]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 902822353}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 4ce80b15-c468-4dd4-b074-9ef743b0860a
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
@@ -484,11 +508,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   curMovementInput: {x: 0, y: 0}
-  cameraContainer: {fileID: 0}
-  minLookX: 0
-  maxLookX: 0
+  jumpForce: 80
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 55
+  maxJumpCount: 1
+  cameraContainer: {fileID: 56417957}
+  minLookX: -85
+  maxLookX: 85
   camCurXRotation: 0
-  camSensitivity: 0
+  camSensitivity: 0.1
   mouseDelta: {x: 0, y: 0}
 --- !u!1 &1161235577
 GameObject:
