@@ -10,6 +10,6 @@ public class UICondition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CharacterManager.Instance.Player.condition.uiCondition = this;
+        CharacterManager.Instance.Player.condition.uiCondition = this;//UICondition 클래스의 인스턴스를 PlayerCondition 클래스의 uiCondition 변수에 할당
     }
 }
