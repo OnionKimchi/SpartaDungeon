@@ -31,6 +31,7 @@ public class Condition : MonoBehaviour
 
     public void Add(float value)//최대값과 최소값 사이로
     {
-        curValue += Mathf.Clamp(value, minValue, maxValue);//현재 값에 value를 더하고, 최소값과 최대값 사이로 제한
+        curValue += value;
+        curValue = Mathf.Clamp(curValue, minValue, maxValue);//현재 값에 value를 더하고, 최소값과 최대값 사이로 제한
     }
 }
