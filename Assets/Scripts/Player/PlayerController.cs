@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float camCurXRotation;
     public float camSensitivity;
     [SerializeField] private Vector2 mouseDelta;
+    public Camera cam; // 플레이어 카메라
 
     private Rigidbody rb;
 
@@ -106,6 +107,23 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
                 jumpStack--;
+            }
+        }
+    }
+    public void OnInteraction(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Performed)
+        {
+            // 카메라 중앙에서 Ray를 쏨
+            Ray ray = cam.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+            int mask = ~LayerMask.GetMask("Player"); // 플레이어 레이어를 제외한 모든 레이어에 대해 Raycast
+            if (Physics.Raycast(ray, out RaycastHit hit, 30f, mask)) // 30f: 상호작용 거리
+            {
+                var interactable = hit.collider.GetComponent<IInteractable>();
+                if (interactable != null)
+                {
+                    interactable.OnInteract();
+                }
             }
         }
     }

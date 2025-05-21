@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 355856473}
   - component: {fileID: 355856475}
   - component: {fileID: 355856474}
+  - component: {fileID: 355856476}
   m_Layer: 5
   m_Name: ObjectDescription
   m_TagString: Untagged
@@ -307,6 +308,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355856472}
   m_CullTransparentMesh: 1
+--- !u!114 &355856476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355856472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662569455d19b9747aec620d77220b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1191523626}
 --- !u!1 &440663163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,13 +1086,21 @@ MonoBehaviour:
     m_ActionId: 4ce80b15-c468-4dd4-b074-9ef743b0860a
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 902822353}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnInteraction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f3b8f98b-2f23-4a99-9f98-69b6183546fa
     m_ActionName: Player/Interaction[/Keyboard/e]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 5f208b8d-55c5-4bac-b549-9fa2684c9218
-    m_ActionName: Player/Attack[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1098,6 +1120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
   condition: {fileID: 0}
+  itemData: {fileID: 0}
 --- !u!114 &902822353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1122,6 +1145,7 @@ MonoBehaviour:
   camCurXRotation: 0
   camSensitivity: 0.1
   mouseDelta: {x: 0, y: 0}
+  cam: {fileID: 791160667}
 --- !u!114 &902822354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1898,7 +1922,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1605548924}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 355856476}
+        m_TargetAssemblyTypeName: ObjectDescriptionUI, Assembly-CSharp
+        m_MethodName: xButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1605548924
 MonoBehaviour:
   m_ObjectHideFlags: 0
