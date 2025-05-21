@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,4 +23,7 @@ public class ItemData : ScriptableObject
 
     public bool canStack;
     public int maxStackAmount;
+
+    // 델리게이트(액션) 추가
+    [NonSerialized] public Action<ItemObject> onInteractAction;
 }
