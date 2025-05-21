@@ -10,19 +10,12 @@ public class ObjectDescriptionUI : MonoBehaviour
     public void SetDescription(string title, string description)
     {
         if (text != null)
-        { 
-            text.text = $"{title}\n{description}"; 
-        }
-    }
-
-    public void xButtonClick()
-    {
-        // "ObjectDescription" 오브젝트를 찾아 비활성화
-        GameObject descriptionObj = GameObject.Find("ObjectDescription");
-        if (descriptionObj != null)
         {
-            descriptionObj.SetActive(false);
-            Time.timeScale = 1; // 게임 재개
+            text.text = $"{title}\n{description}";
+        }
+        else
+        {
+            Debug.LogWarning("TextMeshProUGUI 컴포넌트가 할당되지 않았습니다.");
         }
     }
 }
