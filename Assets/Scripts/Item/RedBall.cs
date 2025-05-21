@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class JumpItemEffect : MonoBehaviour
+public class RadBall : MonoBehaviour
 {
     public float jumpPower = 80f;
 
     public void ApplyJump(GameObject player)
     {
-        var rb = player.GetComponent<Rigidbody>();
+        Rigidbody rb = player.GetComponent<Rigidbody>();
         if (rb != null)
         {
             Vector3 velocity = rb.velocity;

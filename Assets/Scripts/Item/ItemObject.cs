@@ -39,7 +39,7 @@ public class ItemObject : MonoBehaviour, IInteractable
                     break;
                 case ItemType.jumpItem:
                     itemData.onInteractAction = (itemObj) => {
-                        var effect = itemObj.GetComponent<JumpItemEffect>();
+                        var effect = itemObj.GetComponent<RadBall>();
                         if (effect != null)
                         {
                             effect.ApplyJump(CharacterManager.Instance.Player.gameObject);
