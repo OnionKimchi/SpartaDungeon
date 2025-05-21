@@ -7,16 +7,15 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed;
-    [SerializeField] private Vector2 curMovementInput;
+    [SerializeField] private Vector2 curMovementInput;//현재 이동 입력값
     [SerializeField] private float jumpForce = 80f;
     public LayerMask groundLayerMask;
-    [SerializeField] private int maxJumpCount = 1;
-    private int _jumpStack;
+    private int _jumpStack;//점프 스택, _jumpStack으로 선언하여 재귀 호출 방지
     public int jumpStack
     {
         get => _jumpStack;
-        set => _jumpStack = Mathf.Clamp(value, 0, maxJumpCount);
-    }
+        set => _jumpStack = Mathf.Clamp(value, 0, 1);
+    }//점프 스택을 0과 1 사이로 제한
 
     [Header("Look")]
     public Transform cameraContainer;
@@ -43,7 +42,7 @@ public class PlayerController : MonoBehaviour
         // 땅에 닿았으면 점프 스택 복구
         if (IsGrounded())
         {
-            jumpStack = maxJumpCount;
+            jumpStack = 1;
         }
     }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,9 @@ public class Condition : MonoBehaviour
     public float passiveValue;//패시브 값
 
     public Image uiBar;//UI 바
+
+
+    public Func<float> externalValueGetter;//외부에서 값을 가져오는 델리게이트, 점프스택의 경우 외부에서 값을 가져와야 하므로 사용
     void Start()
     {
         curValue = startValue;//현재 값을 시작 값으로 초기화
@@ -20,13 +24,8 @@ public class Condition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //ui 업데이트
-        uiBar.fillAmount = GetPercentage(); //UI 바의 fillAmount를 현재 값으로 설정
-    }
-
-    float GetPercentage()
-    { 
-        return curValue / maxValue; //현재 값과 최대 값을 나누어 비율을 계산
+        float valueToShow = externalValueGetter != null ? externalValueGetter() : curValue;//외부에서 값을 가져오는 함수가 있으면 그 값을 사용하고, 없으면 현재 값을 사용
+        uiBar.fillAmount = valueToShow / maxValue;//UI 바의 채움 양을 현재 값과 최대 값으로 설정
     }
 
     public void Add(float value)//최대값과 최소값 사이로
