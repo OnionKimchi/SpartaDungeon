@@ -26,6 +26,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector2 mouseDelta;
     public Camera cam; // 플레이어 카메라
 
+    // 1. 퍼즈 UI 오브젝트 선언 (인스펙터에서 할당)
+    [SerializeField] private GameObject pauseMenuUI;
+
+    private bool isPaused = false;
+
     private Rigidbody rb;
 
     private void Awake()
@@ -72,6 +77,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
+        if (isPaused) return; // 퍼즈 중 입력 무시
         if (context.phase == InputActionPhase.Performed)
         {
             curMovementInput = context.ReadValue<Vector2>();
@@ -88,11 +94,13 @@ public class PlayerController : MonoBehaviour
 
     public void OnLook(InputAction.CallbackContext context)
     {
+        if (isPaused) return; // 퍼즈 중 입력 무시
         mouseDelta = context.ReadValue<Vector2>();
     }
 
     public void OnJump(InputAction.CallbackContext context)
     {
+        if (isPaused) return; // 퍼즈 중 입력 무시
         if (context.phase == InputActionPhase.Performed)
         {
             if (IsGrounded())
@@ -112,6 +120,7 @@ public class PlayerController : MonoBehaviour
     }
     public void OnInteractionClick(InputAction.CallbackContext context)
     {
+        if (isPaused) return; // 퍼즈 중 입력 무시
         if (context.phase == InputActionPhase.Performed)
         {
             // 카메라 중앙에서 Ray를 쏨
@@ -125,6 +134,17 @@ public class PlayerController : MonoBehaviour
                     interactable.OnInteract();
                 }
             }
+        }
+    }
+
+    public void OnPause(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            isPaused = !isPaused;
+            Time.timeScale = isPaused ? 0f : 1f;
+            if (pauseMenuUI != null)
+                pauseMenuUI.SetActive(isPaused);
         }
     }
 
