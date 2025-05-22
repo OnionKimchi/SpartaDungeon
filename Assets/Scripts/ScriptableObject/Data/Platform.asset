@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f9fc4831ab71b41b0084f31c6814b7, type: 3}
   m_Name: Platform
   m_EditorClassIdentifier: 
-  itemName: Platform
+  itemName: "\uBC1C\uD310"
   itemDescription: "\uBC1F\uC744 \uC218 \uC788\uC5B4\uC694"
   itemType: 2
   itemPrefab: {fileID: 1495381482732483219, guid: 926901540f142fb44a57e8241cf8192d, type: 3}
