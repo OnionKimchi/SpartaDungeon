@@ -53,4 +53,8 @@ Unity 2022.3.17f1 LTS로 개발된 3D 플랫포머 게임입니다.
 - https://github.com/OnionKimchi/Sparta_git/blob/OnionKimchi-TIL/250521
 - https://github.com/OnionKimchi/Sparta_git/blob/OnionKimchi-TIL/250522
 
+## 추가 정보
+
+- 오른쪽 하단의 UI는 빨간게 체력바이고 녹색은 점프 스택 표시 입니다.
+
 
