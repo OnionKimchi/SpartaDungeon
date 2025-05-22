@@ -49,8 +49,8 @@ Unity 2022.3.17f1 LTS로 개발된 3D 플랫포머 게임입니다.
 
 ## 🧩 트러블슈팅 기록 (TIL 링크)
 
-- https://github.com/OnionKimchi/Sparta_git/blob/main/250510
-- https://github.com/OnionKimchi/Sparta_git/blob/main/250511
-- https://github.com/OnionKimchi/Sparta_git/blob/main/250512
+- https://github.com/OnionKimchi/Sparta_git/blob/OnionKimchi-TIL/250520
+- https://github.com/OnionKimchi/Sparta_git/blob/OnionKimchi-TIL/250521
+- https://github.com/OnionKimchi/Sparta_git/blob/OnionKimchi-TIL/250522
 
 
