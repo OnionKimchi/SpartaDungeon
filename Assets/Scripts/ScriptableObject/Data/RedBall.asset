@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f9fc4831ab71b41b0084f31c6814b7, type: 3}
   m_Name: RedBall
   m_EditorClassIdentifier: 
-  itemName: Red Ball
-  itemDescription: If you click this you will jump
+  itemName: "\uBE68\uAC04 \uAD6C\uC2AC"
+  itemDescription: "\uC870\uC900\uD574\uC11C \uC88C\uD074\uB9AD \uD558\uBA74 \uCE90\uB9AD\uD130\uAC00
+    \uC810\uD504"
   itemType: 1
   itemPrefab: {fileID: 1438715176884650228, guid: 21b2d3342b6907d4d9ef77ef89e805cc, type: 3}
   canStack: 0

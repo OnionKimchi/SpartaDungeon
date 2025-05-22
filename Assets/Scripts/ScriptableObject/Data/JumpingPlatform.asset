@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f9fc4831ab71b41b0084f31c6814b7, type: 3}
   m_Name: JumpingPlatform
   m_EditorClassIdentifier: 
-  itemName: Jumping Platform
-  itemDescription: If you step on it, you will jump up
+  itemName: "\uC810\uD504\uB300"
+  itemDescription: "\uBC1F\uC73C\uBA74 \uD280\uC5B4 \uC62C\uB77C"
   itemType: 2
   itemPrefab: {fileID: 8216822509943385813, guid: 827459bf995ac1f4babbb9f72e77fb04, type: 3}
   canStack: 0

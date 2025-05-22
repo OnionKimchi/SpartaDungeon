@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f9fc4831ab71b41b0084f31c6814b7, type: 3}
   m_Name: MovingPlatform
   m_EditorClassIdentifier: 
-  itemName: Moving Platform
-  itemDescription: This platform is moving
+  itemName: "\uC6C0\uC9C1\uC774\uB294 \uBC1C\uD310"
+  itemDescription: "\uC9C0\uC815\uB41C \uC790\uB9AC\uB97C \uC655\uBCF5\uD574\uC694"
   itemType: 2
   itemPrefab: {fileID: 8421765043920476432, guid: e90d8481600d2814d94aad247ce94b10, type: 3}
   canStack: 0

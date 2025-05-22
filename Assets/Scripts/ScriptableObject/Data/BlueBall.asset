@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f9fc4831ab71b41b0084f31c6814b7, type: 3}
   m_Name: BlueBall
   m_EditorClassIdentifier: 
-  itemName: BlueBall
-  itemDescription: If you touch this, your jump stack will be added.
+  itemName: "\uD30C\uB780 \uAD6C\uC2AC"
+  itemDescription: "\uBA39\uC73C\uBA74 \uC810\uD504 \uC2A4\uD0DD\uC774 \uB298\uC5B4\uB098\uC694"
   itemType: 2
   itemPrefab: {fileID: 0}
   canStack: 0
