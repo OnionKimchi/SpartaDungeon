@@ -7,9 +7,9 @@ Unity 2022.3.17f1 LTS로 개발된 3D 플랫포머 게임입니다.
 
 ## 🎮 게임 정보
 
-- **장르**: 3D 플랫포머 / 던전 탐험
-- **플랫폼**: PC (Unity 기반)
-- **조작 방식**:
+- 장르: 3D 플랫포머 / 던전 탐험
+- 플랫폼: PC (Unity 기반)
+- 조작 방식:
   - `WASD` + 마우스 이동
   - `Space`: 점프 (더블 점프 가능)
   - `Tab`: 퍼즈(일시정지)
@@ -20,14 +20,14 @@ Unity 2022.3.17f1 LTS로 개발된 3D 플랫포머 게임입니다.
 ## ⚙️ 주요 시스템
 
 ### 🔵 파란 구슬
-- 먹으면 **더블 점프 스택**을 1회 추가
+- 먹으면 더블 점프 스택을 1회 추가
 
 ### 🔴 빨간 구슬
-- **좌클릭으로 쏘면 캐릭터가 자동 점프**
+- 좌클릭으로 쏘면 캐릭터가 자동 점프
 
 ### 🧩 기타 기믹
-- **움직이는 플랫폼**
-- **밟으면 사라지는 트롤링 플랫폼**
+- 움직이는 플랫폼
+- 밟으면 사라지는 트롤링 플랫폼
 
 ---
 
@@ -46,4 +46,11 @@ Unity 2022.3.17f1 LTS로 개발된 3D 플랫포머 게임입니다.
 ## 🖼️ 스크린샷
 
 ![게임 화면](Assets/Screenshots/ScreenShot.png)
+
+## 🧩 트러블슈팅 기록 (TIL 링크)
+
+- https://github.com/OnionKimchi/Sparta_git/blob/main/250510
+- https://github.com/OnionKimchi/Sparta_git/blob/main/250511
+- https://github.com/OnionKimchi/Sparta_git/blob/main/250512
+
 
